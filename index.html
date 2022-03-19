@@ -61,7 +61,7 @@
 
   </head>
 
-  <body>
+  <body onload="priceupdate()">
     <header class="site-header section index">
       <div class="nav-bar">
         <div class="container">
@@ -257,13 +257,13 @@
                           animate__fadeInUp
                         "
                       >
-                        Free Comuunity Support
+                        <a  href="https://www.facebook.com/groups/1479654902391457" style="color: white;">Free Community Support</a>
                       </h3>
                     </header>
                     <div class="entry-content">
                       <p class="animate__animated wow animate__fadeInUp">
-                        <!-- Take the first free session Build your trust and
-                        see if we can support you on better mental health journey -->
+                        Clear all your queries and concerns from experts for free. 
+                        Click <a href="https://www.facebook.com/groups/1479654902391457" style="color: white;">here</a> to join the community
                       </p>
                     </div>
                   </div>
@@ -307,7 +307,7 @@
 
                     <div class="entry-content">
                       <p class="animate__animated wow animate__fadeInUp">
-                        <!-- Choose time and mode of session as per your convenience -->
+                        Choose time and mode of session as per your convenience
                       </p>
                     </div>
                   </div>
@@ -350,8 +350,7 @@
                     </header>
                     <div class="entry-content">
                       <p class="animate__animated wow animate__fadeInUp">
-                        <!-- Lorem ipsum dolor, sit amet consectetur adipisicing
-                        elit. Dolor, in! -->
+                        Get your session at just <strong id="price">$25/-</strong>
                       </p>
                     </div>
                   </div>
@@ -409,7 +408,7 @@
       
       
       <div class="stat animate__animated wow animate__fadeInUp">
-          <img src="https://image.flaticon.com/icons/png/512/1828/1828884.png" alt="ratings" width="128" height="128"/>
+          <img src="./images/stats-section/star.png" alt="ratings" width="128" height="128"/>
           <h4 class="mt-4">Average Rating</h4>
           <h3 class="counter" data-target="4.64">0</h3>
       </div>
@@ -801,6 +800,92 @@
     <!-- .site-footer -->
 
     <!-- script-->
+
+    <script>
+
+      function priceupdate ()
+      {
+
+        var country="";
+
+         fetch('http://ip-api.com/json')
+          .then(function (response) {
+              return response.json();
+          })
+          .then(function (payload) {
+              country=payload.country;
+              // console.log(payload.location.country.name + ', ' + payload.location.city);
+              console.log(country);
+
+              if(country=="India"){
+                document.getElementById("price").innerHTML="₹100/-";
+              }
+
+              if(country=="United States"){
+                document.getElementById("price").innerHTML="$25/-";
+              }
+
+              if(country=="South Africa"){
+                document.getElementById("price").innerHTML="R250/-";
+              }
+
+              if(country=="Canada"){
+                document.getElementById("price").innerHTML="CAD 30/-";
+              }
+
+              if(country=="Germany"){
+                document.getElementById("price").innerHTML="€ 25/-";
+              }
+
+              if(country=="Nigeria"){
+                document.getElementById("price").innerHTML="₦ 5000/-";
+              }
+
+              if(country=="Pakistan"){
+                document.getElementById("price").innerHTML="₨ 300/-";
+              }
+
+              if(country=="Saudi Arabia"){
+                document.getElementById("price").innerHTML="SR 100/-";
+              }
+
+              if(country=="Japan"){
+                document.getElementById("price").innerHTML="¥ 3000/-";
+              }
+
+              if(country=="Philippines "){
+                document.getElementById("price").innerHTML="₱ 700/-";
+              }
+
+              if(country=="United Kingdom"){
+                document.getElementById("price").innerHTML="£ 25/-";
+              }
+
+              if(country=="Kenya"){
+                document.getElementById("price").innerHTML="KES 2500/-";
+              }
+
+              if(country=="Poland"){
+                document.getElementById("price").innerHTML="Poland złoty 60/-";
+              }
+
+
+              
+              
+
+              
+              
+              console.log("done");
+          });
+      
+
+     
+    } 
+
+    </script>
+
+
+
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/jquery.collapsible.min.js"></script>
     <!--    <script type='text/javascript' src='js/swiper.min.js'></script>-->
@@ -816,6 +901,9 @@
     <script>
       new WOW().init();
     </script>
+
+      
+
 
     <script src="./js/bootstrap.js"></script>
     <script src="./js/animated-counter.js"></script>

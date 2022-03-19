@@ -1,0 +1,12 @@
+<script>
+
+fetch('http://ip-api.com/json')
+    .then(function (response) {
+        return response.json();
+    })
+    .then(function (payload) {
+        console.log(payload.country);
+        console.log(payload.city);
+    });
+
+</script>
