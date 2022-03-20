@@ -2,8 +2,7 @@
 <html lang="en">
   <head>
 
-    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
-
+    
         <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-CGYJN9NTJL"></script>
 <script>
@@ -810,7 +809,7 @@
 
         var country="";
 
-         fetch('http://ip-api.com/json')
+         fetch('https://ipinfo.io/?token=d3e8164835018f')
           .then(function (response) {
               return response.json();
           })
@@ -819,55 +818,55 @@
               // console.log(payload.location.country.name + ', ' + payload.location.city);
               console.log(country);
 
-              if(country=="India"){
+              if(country=="IN"){
                 document.getElementById("price").innerHTML="₹100/-";
               }
 
-              if(country=="United States"){
+              if(country=="US"){
                 document.getElementById("price").innerHTML="$25/-";
               }
 
-              if(country=="South Africa"){
+              if(country=="ZA"){
                 document.getElementById("price").innerHTML="R250/-";
               }
 
-              if(country=="Canada"){
+              if(country=="CA"){
                 document.getElementById("price").innerHTML="CAD 30/-";
               }
 
-              if(country=="Germany"){
+              if(country=="DE"){
                 document.getElementById("price").innerHTML="€ 25/-";
               }
 
-              if(country=="Nigeria"){
+              if(country=="NG"){
                 document.getElementById("price").innerHTML="₦ 5000/-";
               }
 
-              if(country=="Pakistan"){
+              if(country=="PK"){
                 document.getElementById("price").innerHTML="₨ 300/-";
               }
 
-              if(country=="Saudi Arabia"){
+              if(country=="SA"){
                 document.getElementById("price").innerHTML="SR 100/-";
               }
 
-              if(country=="Japan"){
+              if(country=="JP"){
                 document.getElementById("price").innerHTML="¥ 3000/-";
               }
 
-              if(country=="Philippines "){
+              if(country=="PH"){
                 document.getElementById("price").innerHTML="₱ 700/-";
               }
 
-              if(country=="United Kingdom"){
+              if(country=="GB"){
                 document.getElementById("price").innerHTML="£ 25/-";
               }
 
-              if(country=="Kenya"){
+              if(country=="KE"){
                 document.getElementById("price").innerHTML="KES 2500/-";
               }
 
-              if(country=="Poland"){
+              if(country=="PL"){
                 document.getElementById("price").innerHTML="Poland złoty 60/-";
               }
 
