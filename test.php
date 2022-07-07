@@ -1,5 +1,5 @@
 <?php
 
-echo phpversion();
+echo "testing successful";
 
 ?>
